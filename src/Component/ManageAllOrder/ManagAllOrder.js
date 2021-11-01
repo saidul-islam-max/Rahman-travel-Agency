@@ -4,13 +4,13 @@ import { useState } from 'react/cjs/react.development';
 const ManagAllOrder = () => {
     const [packages, setPackage] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://creepy-zombie-80659.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setPackage(data));
     }, [])
 
     const handleDeletUser = id => {
-        const url = `http://localhost:5000/users/${id}`
+        const url = `https://creepy-zombie-80659.herokuapp.com/users/${id}`
         fetch(url,{
             method: 'DELETE'
         })

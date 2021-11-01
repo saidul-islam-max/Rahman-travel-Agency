@@ -8,7 +8,7 @@ const AddPackage = () => {
     const onSubmit = data => {
     console.log(data);
 
-    axios.post('http://localhost:5000/package', data)
+    axios.post('https://creepy-zombie-80659.herokuapp.com/package', data)
     .then(res =>{
         if(res.data.insertedId){
             alert('successfully inserted')

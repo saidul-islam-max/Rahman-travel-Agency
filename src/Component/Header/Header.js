@@ -11,14 +11,14 @@ const Header = () => {
    
     return (
         <div>
-        <div className="header">
+        <div className="header bg-dark">
            <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container">
                 <Link className="navbar-brand" to="/home">
                  <img src={img} width="150" height="60" width="100" alt="" />
                 </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <button className="navbar-toggler btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon btn-light"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 ml-5 mb-lg-0 nav-ul-li">
@@ -26,7 +26,7 @@ const Header = () => {
                     <NavLink to="/home"
                       activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     
                     >Home</NavLink>
@@ -35,7 +35,7 @@ const Header = () => {
                     <NavLink to="/about"
                       activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     >About</NavLink>
                     </li>
@@ -43,7 +43,7 @@ const Header = () => {
                     <NavLink to="/package"
                        activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     >
                         Packag
@@ -56,7 +56,7 @@ const Header = () => {
                     <NavLink to="/myOrder" 
                       activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     >
                        My Order
@@ -72,7 +72,7 @@ const Header = () => {
                     <NavLink to="/managpackege" 
                       activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     >
                         Manag All Order
@@ -88,7 +88,7 @@ const Header = () => {
                     <NavLink to="/addpackage" 
                       activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     >
                         Add Package
@@ -101,7 +101,7 @@ const Header = () => {
                     <NavLink to="/contact" 
                       activeStyle={{
                         fontWeight: "bold",
-                        color: "black"
+                        color: "white"
                       }}
                     >
                         Contact
@@ -115,8 +115,8 @@ const Header = () => {
                        user?.email ?
                         <div className="d-flex">
                             <img src={user.photoURL} className="rounded-circle my-auto img-fluid" alt="" width="30px" height="30px" />
-                        <h5 className="mx-3 my-auto">{user.displayName}</h5>
-                       <button onClick={logOut} className="btn btn-outline-success " type="submit">Log Out</button>
+                        <h5 className="mx-3 my-auto text-light">{user.displayName}</h5>
+                       <button onClick={logOut} className="btn btn-outline-light " type="submit">Log Out</button>
                        </div>
                        :<div>
                         <Link to="/login"><button className="btn btn-outline-success " type="submit">Log In</button></Link>

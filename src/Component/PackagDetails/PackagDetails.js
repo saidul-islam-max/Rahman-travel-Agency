@@ -13,7 +13,7 @@ const PackagDetails = () => {
     const onSubmit = data => {
         console.log(data);
      
-        axios.post('http://localhost:5000/users', data)
+        axios.post('https://creepy-zombie-80659.herokuapp.com/users', data)
         .then(res =>{
             if(res.data.insertedId){
                 alert('successfully inserted')
@@ -31,7 +31,7 @@ const PackagDetails = () => {
   
     
     useEffect(() => {
-        fetch('http://localhost:5000/package')
+        fetch('https://creepy-zombie-80659.herokuapp.com/package')
             .then(res => res.json())
             .then(data => setpackages(data));
     }, [])

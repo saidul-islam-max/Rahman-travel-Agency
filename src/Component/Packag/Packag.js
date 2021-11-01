@@ -6,13 +6,13 @@ import './Packag.css'
 const Packag = () => {
     const [packages, setPackage] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/package')
+        fetch('https://creepy-zombie-80659.herokuapp.com/package')
             .then(res => res.json())
             .then(data => setPackage(data));
     }, [])
     // delet user
     const handleDeletUser = id => {
-          const url = `http://localhost:5000/package/${id}`
+          const url = `https://creepy-zombie-80659.herokuapp.com/package/${id}`
           fetch(url,{
               method: 'DELETE'
           })

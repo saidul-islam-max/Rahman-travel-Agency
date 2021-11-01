@@ -2,7 +2,9 @@
   
     position: relative; 
   }  
-
+  .contact-texts{
+    font-size: 60px;
+  }
  .contact-text:after {
      position: absolute;
      content: '';
@@ -18,5 +20,10 @@
    .contact-text:hover:after {
        width: 30%;
        background: black;
+ }
+ .contact-form input{
+   margin-bottom:10px ;
+   border: none;
+	border-bottom: solid 2px #474544;
  }
  

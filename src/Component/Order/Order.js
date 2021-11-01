@@ -6,7 +6,7 @@ const Order = () => {
     const {user} = useAuth()
     const [packages, setPackage] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://creepy-zombie-80659.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setPackage(data));
     }, [])

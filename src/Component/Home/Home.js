@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [packages, setPackage] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/package')
+        fetch('https://creepy-zombie-80659.herokuapp.com/package')
             .then(res => res.json())
             .then(data => setPackage(data));
     }, [])
@@ -23,8 +23,8 @@ const Home = () => {
                 
                 <div className="col-md-6 col-12 ">
                 
-                <h1 className="fw-bold home-header-text">Rahman Travel Agency</h1>
-                <p>Our service center are best of all Other service center.Our dental care No 1 of the city</p>
+                <h1 className="fw-bold home-header-text text-center">Rahman Travel Agency</h1>
+                <p>Our service center are best of all Other service center.Our Agency No 1 of the city</p>
                 </div>
 
                 <div className="col-md-6 col-12 d-flex justify-content-center homeImg">
